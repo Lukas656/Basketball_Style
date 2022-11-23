@@ -3,7 +3,9 @@
   padding: 0;
 }
 body{
-  background-image: linear-gradient(to left, black, rgb(196, 54, 3));
+  color: white;
+  background-color: rgb(22, 19, 19);
+  font-family: 'Roboto', sans-serif;
 }
 ul {
     list-style-type: none;
@@ -29,39 +31,127 @@ ul {
   }
   
   li a:hover:not(.active) {
-    background-color: rgb(255, 79, 15); 
+    background-color: rgb(255, 68, 0); 
   }
   
   .active {
-    background-color: rgba(212, 58, 2, 0.596); 
+    background-color: rgba(218, 62, 5, 0.986); 
   }
-.titulo{
-  color: white;
-  text-align: center;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  font-size: 60px;
-  padding-top: 25px;
-}
-.subTitulo{
-  color: white;
-  text-align: center;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  font-size: 40px;
-  padding-top: 25px;
-}
-  /* Animação*/
 
-[data-anime] {
-    opacity: 0;
-    transition: .7s;
+.subTitulo{
+  text-align: center;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 30px;
+  margin-top: 15px;
+  margin-bottom: 5px;
+  display: flex;
+  justify-content: space-around;
 }
-[data-anime="left"]{
-    transform: translate3d(-50px, 0, 0);
+
+.subTitulo h3:hover{
+  transform: scale(1.1);
+  cursor: pointer;
 }
-[data-anime="rigth"]{
-    transform: translate3d(-50px, 0, 0);
+
+.sectionGaleriaContainer {
+  padding: 15px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 15px;
+
 }
-.animate{
-    opacity: 1;
-    transform: translate3d(0px,0px,0px);
+
+.galeriaGrid1,
+.galeriaGrid2{
+  height: 270px;
+  cursor: pointer;
+  width: 100%;
 }
+
+
+
+/* Conteiner com informações*/
+.conteiner1, .conteiner2, .conteiner3{
+  display: none;
+  grid-template-columns: 1fr 1.8fr;
+}
+
+.close1, .close2, .close3{
+  background-color: #FF0000;
+  width: 55px;
+  height: 25px;
+  color: white;
+}
+
+.side{
+ background-color: rgba(0, 0, 255, 0.041);
+}
+.preco{
+  width: 190px;
+  margin-top: 100px;
+  margin-left: 100px;
+  padding: 15px;
+}
+.preco p{
+  margin-top: 15px;
+  margin-bottom: 15px;
+  font-size: 11px;
+  color: #9C9696;
+}
+.preco h2{
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+.preco button{
+  text-decoration: none;
+  width: 200px;
+  height: 50px;
+  color: white;
+  background-color:  #FF0000; 
+  border: none;   
+}
+main{
+  height: auto;
+  text-align: center;
+  background-color:  #C4C4C4;
+}
+/* Tenis em destaque*/
+.item1 .caixaItem1, .caixaItem2, .caixaItem3{
+  width: 358px;
+  height: 340px;
+  margin-top: 20px;
+  margin-left: 230px;
+}
+.caixaItem1{
+  background-image: url('src/Camisas/camisa1.jfif');
+  background-repeat: no-repeat;
+  background-size: 110%;
+}
+.caixaItem2{
+  background-image: url('src/Tenis/but1.jfif');
+  background-repeat: no-repeat;
+  background-size: 110%;
+}
+.caixaItem3{
+  background-image: url('src/Bolas/b2.jfif');
+  background-repeat: no-repeat;
+  background-size: 110%;
+}
+
+/* Grupo de tenis*/
+.grupItem{
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.grupItem img{
+ width: 125px;
+ margin: 1%;
+}
+.item3{
+  border-bottom: 4px solid red;
+}
+
